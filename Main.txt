@@ -4,7 +4,7 @@ local Options = {
     BrookhavenTitle = "Warriors Hub - Brookhaven",
     TitleColor = Color3.fromRGB(255, 255, 255),
     LabelColor = Color3.fromRGB(200, 0, 0),
-    Owners = {"Shelby/Troll"}
+    Owners = {"Nightmare/Troll"}
 }
 
 local GameTitle = Options.BrookhavenTitle
@@ -225,7 +225,7 @@ function IceHub.CreateMain()
     ButtonBorder6.Parent = LagAll
 
     local UICorner_9 = Instance.new("UICorner")
-    UICorner_9.CornerRadius = UDim.new(0,2)
+    UICorner_9.CornerRadius = UDim.new(0,4)
     UICorner_9.Parent = LagAll
 
     LagAll.MouseButton1Click:Connect(function()
@@ -1061,7 +1061,6 @@ function IceHub.CreateMain()
                 ButtonIcon.Position = UDim2.new(0, 0, 0.1, 0)
                 ButtonIcon.Size = UDim2.new(0, 25, 0, 25)
                 ButtonIcon.Image = "rbxassetid://105851806789619"
-                ButtonIcon.ImageColor3 = Color3.fromRGB(200, 0, 0)
 
                 ButtonIcon2.Name = "Icon"
                 ButtonIcon2.Parent = TemplateButton
@@ -1069,7 +1068,6 @@ function IceHub.CreateMain()
                 ButtonIcon2.Position = UDim2.new(0.93, 0, 0.15, 0)
                 ButtonIcon2.Size = UDim2.new(0, 20, 0, 20)
                 ButtonIcon2.Image = "rbxassetid://109266253466247"
-                ButtonIcon2.ImageColor3 = Color3.fromRGB(200, 0, 0)
 
                 local Toggle = false
                 TemplateButton.MouseButton1Click:Connect(function()
@@ -1084,17 +1082,29 @@ function IceHub.CreateMain()
                         TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                         {
                         Rotation = 90,
-                        ImageTransparency = 0,
-                        ImageColor3 = Color3.fromRGB(200, 0, 0)
+                        ImageTransparency = 0
                         })tween:Play()
                         ButtonIcon.Image = imageOn
+                        
+                        local colorTween = TweenService:Create(
+                            ButtonIcon,
+                            TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                            {ImageColor3 = Color3.fromRGB(200, 0, 0)}
+                        )
+                        colorTween:Play()
                     else
                         local tween = TweenService:Create(
                         ButtonIcon,TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Rotation = 0,
-                        ImageTransparency = 0.3,
-                        ImageColor3 = Color3.fromRGB(200, 0, 0)
+                        ImageTransparency = 0.3
                         })tween:Play()
                         ButtonIcon.Image = imageOff
+                        
+                        local colorTween = TweenService:Create(
+                            ButtonIcon,
+                            TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                            {ImageColor3 = Color3.fromRGB(255, 255, 255)}
+                        )
+                        colorTween:Play()
                     end
 
                     callback(Toggle)
@@ -1175,7 +1185,7 @@ function IceHub.CreateMain()
                 ButtonIcon.Parent = TemplateBox
                 ButtonIcon.BackgroundTransparency = 1
                 ButtonIcon.Position = UDim2.new(0.02, 0, 0.15, 0)
-                ButtonIcon.ImageColor3 = Color3.fromRGB(200, 0, 0)
+                ButtonIcon.ImageColor3 = Color3.new(50/255, 50/255, 50/255)
                 ButtonIcon.Size = UDim2.new(0, 20, 0, 20)
                 ButtonIcon.Image = "rbxassetid://97889814027474"
                 ButtonIcon.Rotation = 270
@@ -1186,7 +1196,6 @@ function IceHub.CreateMain()
                 ButtonIcon2.Position = UDim2.new(0.93, 0, 0.15, 0)
                 ButtonIcon2.Size = UDim2.new(0, 20, 0, 20)
                 ButtonIcon2.Image = "rbxassetid://109266253466247"
-                ButtonIcon2.ImageColor3 = Color3.fromRGB(200, 0, 0)
                 
                 TemplateBox.FocusLost:Connect(function()
                     callback(TemplateBox.Text)
