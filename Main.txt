@@ -1,14 +1,18 @@
--- IceHub UI Library
+-- Script privado
 
 local IceHub = {}
 
 local Options = {
-    BrookhavenTitle = "Shnmaxhub - Brookhaven",
-    TitleColor = Color3.fromRGB(255, 50, 50)
+    BrookhavenTitle = "Lyrahub - Brookhaven",
+    TitleColor = Color3.fromRGB(255, 255, 255),
+    LabelColor = Color3.fromRGB(255, 0, 0),
+    Owners = {"Shelby"}
 }
 
 local GameTitle = Options.BrookhavenTitle
 local titlecolor = Options.TitleColor
+local labelcolor = Options.LabelColor
+local owners = Options.Owners
 local player = game.Players.LocalPlayer
 
 function IceHub.CreateMain()
@@ -36,6 +40,8 @@ function IceHub.CreateMain()
     local KickAll = Instance.new("TextButton")
     local UICorner_9 = Instance.new("UICorner")
     local TextLabel = Instance.new("TextLabel")
+    local TemplateLabel = Instance.new("TextLabel")
+    local UICorner_13 = Instance.new("UICorner")
     local TemplateTargettedLabel = Instance.new("TextLabel")
     local UICorner_14 = Instance.new("UICorner")
     local Target = Instance.new("TextLabel")
@@ -97,7 +103,7 @@ function IceHub.CreateMain()
     local ButtonBorder = Instance.new("UIStroke")
     ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     ButtonBorder.Thickness = 0.5
-    ButtonBorder.Color = Color3.fromRGB(40, 40, 40)
+    ButtonBorder.Color = Color3.fromRGB(30, 30, 30)
     ButtonBorder.Parent = MainFrame
 
     UICorner.CornerRadius = UDim.new(0, 4)
@@ -106,7 +112,7 @@ function IceHub.CreateMain()
     TabContainer.Name = "TabContainer"
     TabContainer.Parent = MainFrame
     TabContainer.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-    TabContainer.BorderColor3 = Color3.fromRGB(40, 40, 40)
+    TabContainer.BorderColor3 = Color3.fromRGB(30, 30, 30)
     TabContainer.Size = UDim2.new(0, 110, 0, 210)
     
     UICorner_2.CornerRadius = UDim.new(0, 3)
@@ -125,11 +131,11 @@ function IceHub.CreateMain()
     ScrollingFrame.ScrollBarThickness = 0
     ScrollingFrame.TopImage = ""
     
-    local ButtonBorder2 = Instance.new("UIStroke")
-    ButtonBorder2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    ButtonBorder2.Thickness = 0.5
-    ButtonBorder2.Color = Color3.fromRGB(40, 40, 40)
-    ButtonBorder2.Parent = ScrollingFrame
+    local ButtonBorder = Instance.new("UIStroke")
+    ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    ButtonBorder.Thickness = 0.5
+    ButtonBorder.Color = Color3.fromRGB(30, 30, 30)
+    ButtonBorder.Parent = ScrollingFrame
 
     UIListLayout.Parent = ScrollingFrame
     UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -144,15 +150,15 @@ function IceHub.CreateMain()
     Menu.AutoButtonColor = false
     Menu.Font = Enum.Font.Gotham
     Menu.Text = "Menu"
-    Menu.TextColor3 = Color3.fromRGB(255, 50, 50)
+    Menu.TextColor3 = Color3.fromRGB(255, 0, 0)
     Menu.TextSize = 12.000
     Menu.MouseButton1Click:Connect(function()
         for i,v in pairs(TabContainer.ScrollingFrame:GetChildren()) do
             if v:IsA("TextButton") then
-                v.TextColor3 = Color3.fromRGB(220, 220, 220)
+                v.TextColor3 = Color3.fromRGB(255, 255, 255)
             end
         end
-        Menu.TextColor3 = Color3.fromRGB(255, 50, 50)
+        Menu.TextColor3 = Color3.fromRGB(255, 0, 0)
         
         for i,v in pairs(FrameContainer:GetChildren()) do
             if v:IsA("ScrollingFrame") then
@@ -172,7 +178,7 @@ function IceHub.CreateMain()
     MenuPage.Parent = FrameContainer
     MenuPage.Active = true
     MenuPage.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-    MenuPage.BorderColor3 = Color3.fromRGB(40, 40, 40)
+    MenuPage.BorderColor3 = Color3.fromRGB(30, 30, 30)
     MenuPage.Position = UDim2.new(0.273000002, 0, 0.159999996, 0)
     MenuPage.Size = UDim2.new(0, 303, 0, 170)
     MenuPage.CanvasSize = UDim2.new(0, 0, 50, 0)
@@ -187,34 +193,34 @@ function IceHub.CreateMain()
     NameLabel.Size = UDim2.new(0, 180, 0, 27)
     NameLabel.Font = Enum.Font.SourceSans
     NameLabel.Text = "Hey " .. player.Name
-    NameLabel.TextColor3 = Color3.fromRGB(255, 50, 50)
+    NameLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
     NameLabel.TextSize = 14.000
     
-    local ButtonBorder3 = Instance.new("UIStroke")
-    ButtonBorder3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    ButtonBorder3.Thickness = 0.5
-    ButtonBorder3.Color = Color3.fromRGB(40, 40, 40)
-    ButtonBorder3.Parent = NameLabel
+    local ButtonBorder = Instance.new("UIStroke")
+    ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    ButtonBorder.Thickness = 0.5
+    ButtonBorder.Color = Color3.fromRGB(30, 30, 30)
+    ButtonBorder.Parent = NameLabel
 
-    UICorner_4.CornerRadius = UDim.new(0, 4)
-    UICorner_4.Parent = NameLabel
-
+    UICorner_8.CornerRadius = UDim.new(0, 4)
+    UICorner_8.Parent = NameLabel
+    
     local corner = Instance.new("UICorner")
-    corner.CornerRadius = UDim.new(0, 4)
+    corner.CornerRadius = UDim.new(0, 4) 
     corner.Parent = NameLabel
 
     ImageLabel.Parent = MenuPage
     ImageLabel.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-    ImageLabel.BorderColor3 = Color3.fromRGB(40, 40, 40)
+    ImageLabel.BorderColor3 = Color3.fromRGB(30, 30, 30)
     ImageLabel.Position = UDim2.new(0.0249417536, 0, 0.000552987156, 0)
     ImageLabel.Size = UDim2.new(0, 91, 0, 91)
-    ImageLabel.Image = ""
+    ImageLabel.Image = "rbxassetid://0"
 
-    local ButtonBorder4 = Instance.new("UIStroke")
-    ButtonBorder4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    ButtonBorder4.Thickness = 0.5
-    ButtonBorder4.Color = Color3.fromRGB(40, 40, 40)
-    ButtonBorder4.Parent = ImageLabel
+    local ButtonBorder = Instance.new("UIStroke")
+    ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    ButtonBorder.Thickness = 0.5
+    ButtonBorder.Color = Color3.fromRGB(30, 30, 30)
+    ButtonBorder.Parent = ImageLabel
 
     UICorner_5.CornerRadius = UDim.new(0, 4)
     UICorner_5.Parent = ImageLabel
@@ -223,7 +229,6 @@ function IceHub.CreateMain()
     local Players = game:GetService("Players")
     local RunService = game:GetService("RunService")
     local LocalPlayer = Players.LocalPlayer
-    local KickAll = Instance.new("TextButton")
 
     KickAll.Name = "KickAll"
     KickAll.Parent = MenuPage
@@ -234,21 +239,22 @@ function IceHub.CreateMain()
     KickAll.AutoButtonColor = false
     KickAll.Font = Enum.Font.SourceSans
     KickAll.Text = "Kick All"
-    KickAll.TextColor3 = Color3.fromRGB(255, 50, 50)
+    KickAll.TextColor3 = Color3.fromRGB(255, 0, 0)
     KickAll.TextSize = 14
 
-    local ButtonBorder5 = Instance.new("UIStroke")
-    ButtonBorder5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    ButtonBorder5.Thickness = 0.5
-    ButtonBorder5.Color = Color3.fromRGB(40,40,40)
-    ButtonBorder5.Parent = KickAll
+    local ButtonBorder = Instance.new("UIStroke")
+    ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    ButtonBorder.Thickness = 0.5
+    ButtonBorder.Color = Color3.fromRGB(30,30,30)
+    ButtonBorder.Parent = KickAll
 
-    local UICornerKick = Instance.new("UICorner")
-    UICornerKick.CornerRadius = UDim.new(0,2)
-    UICornerKick.Parent = KickAll
+    local UICorner = Instance.new("UICorner")
+    UICorner.CornerRadius = UDim.new(0,2)
+    UICorner.Parent = KickAll
 
     KickAll.MouseButton1Click:Connect(function()
         local player = Players.LocalPlayer
+
         local success, character = pcall(function()
             return player.Character or player.CharacterAdded:Wait()
         end)
@@ -259,6 +265,7 @@ function IceHub.CreateMain()
         end
 
         local hrp = character:WaitForChild("HumanoidRootPart")
+
         pcall(function()
             workspace.CurrentCamera:Destroy()
         end)
@@ -270,6 +277,7 @@ function IceHub.CreateMain()
 
         if storeButton then
             hrp.CFrame = storeButton.CFrame + Vector3.new(0, 0, 0)
+
             local clickDetector
             pcall(function()
                 clickDetector = storeButton:WaitForChild("ClickDetector")
@@ -283,6 +291,7 @@ function IceHub.CreateMain()
         end
 
         local tools = workspace.WorkspaceCom["001_CommercialStores"].CommercialStorage1.Store.Tools
+
         local iphone, laptop
         pcall(function()
             iphone = tools:WaitForChild("Iphone")
@@ -300,6 +309,7 @@ function IceHub.CreateMain()
         end
 
         local timesPerFrame = 150
+
         RunService.RenderStepped:Connect(function()
             for i = 1, timesPerFrame do
                 safeClick(iphone)
@@ -314,15 +324,15 @@ function IceHub.CreateMain()
     TextLabel.Position = UDim2.new(0.374412775, 0, 0.01060241, 0)
     TextLabel.Size = UDim2.new(0, 180, 0, 27)
     TextLabel.Font = Enum.Font.SourceSans
-    TextLabel.Text = "Shnmaxhub"
-    TextLabel.TextColor3 = Color3.fromRGB(220, 220, 220)
+    TextLabel.Text = "Info"
+    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextLabel.TextSize = 14.000
     
-    local ButtonBorder6 = Instance.new("UIStroke")
-    ButtonBorder6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    ButtonBorder6.Thickness = 0.5
-    ButtonBorder6.Color = Color3.fromRGB(40, 40, 40)
-    ButtonBorder6.Parent = TextLabel
+    local ButtonBorder = Instance.new("UIStroke")
+    ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    ButtonBorder.Thickness = 0.5
+    ButtonBorder.Color = Color3.fromRGB(30, 30, 30)
+    ButtonBorder.Parent = TextLabel
 
     local UICorner_9 = Instance.new("UICorner")
     UICorner_9.CornerRadius = UDim.new(0, 4)
@@ -356,8 +366,8 @@ function IceHub.CreateMain()
 
     Bar.Name = "Bar"
     Bar.Parent = SliderButton
-    Bar.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
-    Bar.BorderColor3 = Color3.fromRGB(255, 50, 50)
+    Bar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Bar.BorderColor3 = Color3.fromRGB(255, 0, 0)
     Bar.Position = UDim2.new(-0.00427652989, 0, -0.0999959335, 0)
     Bar.Size = UDim2.new(0, 0, 0, 6)
 
@@ -372,7 +382,7 @@ function IceHub.CreateMain()
     Value.Size = UDim2.new(0, 30, 0, 15)
     Value.Font = Enum.Font.SourceSans
     Value.Text = "0"
-    Value.TextColor3 = Color3.fromRGB(220, 220, 220)
+    Value.TextColor3 = Color3.fromRGB(255, 255, 255)
     Value.TextSize = 14.000
     Value.TextWrapped = true
 
@@ -384,7 +394,7 @@ function IceHub.CreateMain()
     SliderTitle.Size = UDim2.new(0, 70, 0, 15)
     SliderTitle.Font = Enum.Font.Gotham
     SliderTitle.Text = "Slider"
-    SliderTitle.TextColor3 = Color3.fromRGB(220, 220, 220)
+    SliderTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
     SliderTitle.TextSize = 12.000
     SliderTitle.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -405,15 +415,15 @@ function IceHub.CreateMain()
     TopFrame.Name = "TopFrame"
     TopFrame.Parent = MainFrame
     TopFrame.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-    TopFrame.BorderColor3 = Color3.fromRGB(40, 40, 40)
+    TopFrame.BorderColor3 = Color3.fromRGB(30, 30, 30)
     TopFrame.Position = UDim2.new(0, 0, -0.00476175966, 0)
     TopFrame.Size = UDim2.new(0, 425, 0, 30)
 
-    local ButtonBorder7 = Instance.new("UIStroke")
-    ButtonBorder7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    ButtonBorder7.Thickness = 0.5
-    ButtonBorder7.Color = Color3.fromRGB(40, 40, 40)
-    ButtonBorder7.Parent = TopFrame
+    local ButtonBorder = Instance.new("UIStroke")
+    ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    ButtonBorder.Thickness = 0.5
+    ButtonBorder.Color = Color3.fromRGB(30, 30, 30)
+    ButtonBorder.Parent = TopFrame
 
     UICorner_21.CornerRadius = UDim.new(0, 4)
     UICorner_21.Parent = TopFrame
@@ -427,7 +437,7 @@ function IceHub.CreateMain()
     Close.AutoButtonColor = false
     Close.Font = Enum.Font.Gotham
     Close.Text = "X"
-    Close.TextColor3 = Color3.fromRGB(220, 220, 220)
+    Close.TextColor3 = Color3.fromRGB(255, 255, 255)
     Close.TextSize = 12.000
 
     UICorner_22.CornerRadius = UDim.new(0, 4)
@@ -450,7 +460,7 @@ function IceHub.CreateMain()
                 local whiteTween = TweenService:Create(
                     Close,
                     TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                    {TextColor3 = Color3.fromRGB(220, 220, 220)}
+                    {TextColor3 = Color3.fromRGB(255, 255, 255)}
                 )
                 whiteTween:Play()
                 Times = 0
@@ -522,16 +532,15 @@ function IceHub.CreateMain()
     Minimize.AutoButtonColor = false
     Minimize.Font = Enum.Font.Gotham
     Minimize.Text = "-"
-    Minimize.TextColor3 = Color3.fromRGB(220, 220, 220)
+    Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
     Minimize.TextSize = 12.000
 
     local isMinimized = false
     local AT 
     Minimize.MouseButton1Click:Connect(function()
         if not isMinimized then
-            game:GetService("TweenService"):Create(MainFrame,TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{
-                Position = UDim2.new(0.5, 0, 0, 30),
-                Size = UDim2.new(0, 425, 0, 30)
+            game:GetService("TweenService"):Create(MainFrame,TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Position = UDim2.new(0.5, 0, 0, 30),
+            Size = UDim2.new(0, 425, 0, 30)
             }):Play()
 
             for i,v in pairs(FrameContainer:GetChildren()) do
@@ -544,6 +553,7 @@ function IceHub.CreateMain()
             Minimize.Text = "+"
         else
             local TweenFinished = false
+
             local TT = game:GetService("TweenService"):Create(
                 MainFrame,
                 TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -558,9 +568,10 @@ function IceHub.CreateMain()
             repeat task.wait() until TweenFinished
             AT.Visible = true
             TabContainer.Visible = true
+
             Minimize.Text = "-" 
         end
-        
+
         isMinimized = not isMinimized
     end)
 
@@ -570,12 +581,12 @@ function IceHub.CreateMain()
     Title.Name = "Title"
     Title.Parent = TopFrame
     Title.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-    Title.BorderColor3 = Color3.fromRGB(40, 40, 40)
+    Title.BorderColor3 = Color3.fromRGB(30, 30, 30)
     Title.Position = UDim2.new(0.0470588244, 0, 0.233333349, 0)
     Title.Size = UDim2.new(0, 200, 0, 15)
     Title.Font = Enum.Font.Gotham
     Title.Text = ""..GameTitle
-    Title.TextColor3 = Color3.fromRGB(220, 220, 220)
+    Title.TextColor3 = Color3.fromRGB(255, 255, 255)
     Title.TextSize = 12.000
     Title.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -614,7 +625,7 @@ function IceHub.CreateMain()
     DontClose.Visible = false
     DontClose.Font = Enum.Font.SourceSans
     DontClose.Text = "Don't Close"
-    DontClose.TextColor3 = Color3.fromRGB(255, 50, 50)
+    DontClose.TextColor3 = Color3.fromRGB(255, 0, 0)
     DontClose.TextSize = 20.000
 
     UICorner_26.CornerRadius = UDim.new(0, 4)
@@ -629,7 +640,7 @@ function IceHub.CreateMain()
     YesClose.Visible = false
     YesClose.Font = Enum.Font.SourceSans
     YesClose.Text = "Yes, Close"
-    YesClose.TextColor3 = Color3.fromRGB(50, 255, 50)
+    YesClose.TextColor3 = Color3.fromRGB(255, 0, 0)
     YesClose.TextSize = 20.000
 
     UICorner_27.CornerRadius = UDim.new(0, 4)
@@ -643,7 +654,7 @@ function IceHub.CreateMain()
     TextLabel_2.Visible = false
     TextLabel_2.Font = Enum.Font.SourceSans
     TextLabel_2.Text = "Warning ! Are you sure to close Shnmaxhub ?"
-    TextLabel_2.TextColor3 = Color3.fromRGB(220, 220, 220)
+    TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextLabel_2.TextSize = 18.000
 
     UICorner_28.CornerRadius = UDim.new(0, 4)
@@ -671,14 +682,14 @@ function IceHub.CreateMain()
     NotifyText.Size = UDim2.new(0, 225, 0, 75)
     NotifyText.Font = Enum.Font.SourceSans
     NotifyText.Text = "Text Notify"
-    NotifyText.TextColor3 = Color3.fromRGB(220, 220, 220)
+    NotifyText.TextColor3 = Color3.fromRGB(255, 255, 255)
     NotifyText.TextSize = 20.000
     NotifyText.TextWrapped = true
 
     TimerBar.Name = "TimerBar"
     TimerBar.Parent = Notify
-    TimerBar.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
-    TimerBar.BorderColor3 = Color3.fromRGB(255, 50, 50)
+    TimerBar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    TimerBar.BorderColor3 = Color3.fromRGB(255, 0, 0)
     TimerBar.Position = UDim2.new(0, 0, 0.972999692, 0)
     TimerBar.Size = UDim2.new(0, 225, 0, 2)
 
@@ -704,14 +715,14 @@ function IceHub.CreateMain()
     NotifyText_2.Size = UDim2.new(0, 158, 0, 75)
     NotifyText_2.Font = Enum.Font.SourceSans
     NotifyText_2.Text = "Image Notify"
-    NotifyText_2.TextColor3 = Color3.fromRGB(220, 220, 220)
+    NotifyText_2.TextColor3 = Color3.fromRGB(255, 255, 255)
     NotifyText_2.TextSize = 18.000
     NotifyText_2.TextWrapped = true
 
     TimerBar_2.Name = "TimerBar"
     TimerBar_2.Parent = ImageNotify
-    TimerBar_2.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
-    TimerBar_2.BorderColor3 = Color3.fromRGB(255, 50, 50)
+    TimerBar_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    TimerBar_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
     TimerBar_2.Position = UDim2.new(0, 0, 0.972999692, 0)
     TimerBar_2.Size = UDim2.new(0, 225, 0, 2)
 
@@ -739,6 +750,7 @@ function IceHub.CreateMain()
         local function UpdateSize()
             local cS = PageListLayout.AbsoluteContentSize
             local totalHeight = cS.Y
+
             for _, child in ipairs(TemplatePage:GetChildren()) do
                 if child:IsA("Frame") and child.Name == "OptionsFrame" then
                     for i,v in pairs(child:GetChildren()) do
@@ -748,7 +760,9 @@ function IceHub.CreateMain()
                     end
                 end
             end
+
             totalHeight = totalHeight + 10
+
             game.TweenService:Create(
                 TemplatePage,
                 TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In),
@@ -756,22 +770,6 @@ function IceHub.CreateMain()
                     CanvasSize = UDim2.new(0, 0, 0, totalHeight)
                 }
             ):Play()
-        end
-
-        local function UpdateDropdownSize(dropdownFrame)
-            local cS = PageListLayout.AbsoluteContentSize
-            local dropdownHeight = dropdownFrame.AbsoluteSize.Y
-            local dropdownPosition = dropdownFrame.AbsolutePosition.Y - TemplatePage.AbsolutePosition.Y
-            local neededHeight = dropdownPosition + dropdownHeight + 20 
-            if neededHeight > cS.Y then
-                game.TweenService:Create(
-                    TemplatePage,
-                    TweenInfo.new(0.2, Enum.EasingStyle.Quad),
-                    {
-                        CanvasSize = UDim2.new(0, 0, 0, neededHeight)
-                    }
-                ):Play()
-            end
         end
 
         TemplateTab.Name = "TemplateTab"
@@ -783,7 +781,7 @@ function IceHub.CreateMain()
         TemplateTab.AutoButtonColor = false
         TemplateTab.Font = Enum.Font.Gotham
         TemplateTab.Text = ""..TabName
-        TemplateTab.TextColor3 = Color3.fromRGB(220, 220, 220)
+        TemplateTab.TextColor3 = Color3.fromRGB(255, 255, 255)
         TemplateTab.TextSize = 12.000
 
         UICorner_3.CornerRadius = UDim.new(0, 3)
@@ -820,15 +818,13 @@ function IceHub.CreateMain()
             TemplatePage.Visible = true
             for i,v in next, TabContainer.ScrollingFrame:GetChildren() do
                 if v:IsA("TextButton") then
-                    v.TextColor3 = Color3.fromRGB(220, 220, 220)
+                    v.TextColor3 = Color3.fromRGB(255, 255, 255)
                 end
             end
-            TemplateTab.TextColor3 = Color3.fromRGB(255, 50, 50)
+            TemplateTab.TextColor3 = Color3.fromRGB(255, 0, 0)
         end)
 
         local Sections = {}
-        local focusing = false
-        local viewDe = false
 
         function Sections:NewSection(secName, hidden)
             local TemplateSection = Instance.new("Frame")
@@ -870,14 +866,14 @@ function IceHub.CreateMain()
                 TemplateButton.Position = UDim2.new(0.05, 0, 0.198794991, 0)
                 TemplateButton.Size = UDim2.new(0, 295, 0, 30)
                 TemplateButton.Text = ""
-                TemplateButton.TextColor3 = Color3.fromRGB(220, 220, 220)
+                TemplateButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 
                 UICorner_11.CornerRadius = UDim.new(0, 4)
                 UICorner_11.Parent = TemplateButton
 
                 ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
                 ButtonBorder.Thickness = 0.5
-                ButtonBorder.Color = Color3.fromRGB(40, 40, 40)
+                ButtonBorder.Color = Color3.fromRGB(30, 30, 30)
                 ButtonBorder.Parent = TemplateButton
 
                 updateSectionFrame()
@@ -889,7 +885,7 @@ function IceHub.CreateMain()
                 TemplateText.Text = ""..ButtonName
                 TemplateText.Font = Enum.Font.Gotham
                 TemplateText.TextSize = 12.000
-                TemplateText.TextColor3 = Color3.fromRGB(220, 220, 220)
+                TemplateText.TextColor3 = Color3.fromRGB(255, 255, 255)
                 TemplateText.TextXAlignment = Enum.TextXAlignment.Left
                 TemplateText.BackgroundTransparency = 1
 
@@ -906,7 +902,6 @@ function IceHub.CreateMain()
                 ButtonIcon2.Position = UDim2.new(0.93, 0, 0.15, 0)
                 ButtonIcon2.Size = UDim2.new(0, 20, 0, 20)
                 ButtonIcon2.Image = "rbxassetid://109266253466247"
-                
                 TemplateButton.MouseButton1Click:Connect(function()
                     callback()
                 end)
@@ -927,15 +922,15 @@ function IceHub.CreateMain()
                 DropdownButton.Position = UDim2.new(0.05, 0, 0, 0)
                 DropdownButton.Size = UDim2.new(0, 295, 0, 30)
                 DropdownButton.Text = ""
-                DropdownButton.TextColor3 = Color3.fromRGB(220, 220, 220)
+                DropdownButton.TextColor3 = Color3.fromRGB(255, 255, 255)
                 DropdownButton.ZIndex = 2
-                
+
                 local ButtonBorder = Instance.new("UIStroke")
                 ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
                 ButtonBorder.Thickness = 0.5
-                ButtonBorder.Color = Color3.fromRGB(40, 40, 40)
+                ButtonBorder.Color = Color3.fromRGB(30, 30, 30)
                 ButtonBorder.Parent = DropdownButton
-                
+
                 local UICorner = Instance.new("UICorner")
                 UICorner.CornerRadius = UDim.new(0, 4)
                 UICorner.Parent = DropdownButton
@@ -947,7 +942,7 @@ function IceHub.CreateMain()
                 DropdownText.Text = DropdownName
                 DropdownText.Font = Enum.Font.Gotham
                 DropdownText.TextSize = 12
-                DropdownText.TextColor3 = Color3.fromRGB(220, 220, 220)
+                DropdownText.TextColor3 = Color3.fromRGB(255, 255, 255)
                 DropdownText.TextXAlignment = Enum.TextXAlignment.Left
                 DropdownText.BackgroundTransparency = 1
                 DropdownText.ZIndex = 2
@@ -973,7 +968,7 @@ function IceHub.CreateMain()
                 local OptionsFrame = Instance.new("Frame")
                 OptionsFrame.Name = "OptionsFrame"
                 OptionsFrame.Parent = TemplatePage
-                OptionsFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+                OptionsFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
                 OptionsFrame.BorderSizePixel = 0
                 OptionsFrame.Position = UDim2.new(0.05, 0, 0, 0)
                 OptionsFrame.Size = UDim2.new(0, 295, 0, 0)
@@ -989,25 +984,20 @@ function IceHub.CreateMain()
                 for _, option in ipairs(Options) do
                     table.insert(currentOptions, option)
                 end
-                local function updateOptionsFramePosition()
-                    local absoluteY = DropdownButton.AbsolutePosition.Y + DropdownButton.AbsoluteSize.Y - TemplatePage.AbsolutePosition.Y
-                    OptionsFrame.Position = UDim2.new(0.05, 0, 0, absoluteY + TemplatePage.CanvasPosition.Y)
-                end
-                
+
                 local function toggleDropdown()
                     isOpen = not isOpen
-                    updateOptionsFramePosition()
                     local goalRotation = isOpen and 180 or 0
                     game:GetService("TweenService"):Create(
                         DropdownIcon,
                         TweenInfo.new(0.2),
                         {Rotation = goalRotation}
                     ):Play()
-                    
+
                     if isOpen then
                         OptionsFrame.Visible = isOpen
                     end
-                    
+
                     local TWeenF = false
                     local targetHeight = isOpen and (optionHeight * totalOptions) or 0
                     local GG = game:GetService("TweenService"):Create(
@@ -1020,12 +1010,12 @@ function IceHub.CreateMain()
                         TWeenF = true
                     end)
                     GG:Play()
-                    
+
                     repeat task.wait() until TWeenF
                     if not isOpen then
                         OptionsFrame.Visible = isOpen
                     end
-                    
+
                     UpdateSize()
                 end
 
@@ -1033,14 +1023,14 @@ function IceHub.CreateMain()
                     local OptionButton = Instance.new("TextButton")
                     OptionButton.Name = "OptionButton_"..option
                     OptionButton.Parent = OptionsFrame
-                    OptionButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+                    OptionButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
                     OptionButton.BorderSizePixel = 0
                     OptionButton.Position = UDim2.new(0, 0, 0, (index-1)*optionHeight)
                     OptionButton.Size = UDim2.new(1, 0, 0, optionHeight)
                     OptionButton.Text = "   "..option
                     OptionButton.Font = Enum.Font.Gotham
                     OptionButton.TextSize = 12
-                    OptionButton.TextColor3 = Color3.fromRGB(220, 220, 220)
+                    OptionButton.TextColor3 = Color3.fromRGB(255, 255, 255)
                     OptionButton.TextXAlignment = Enum.TextXAlignment.Left
                     OptionButton.ZIndex = 3
 
@@ -1053,7 +1043,7 @@ function IceHub.CreateMain()
                         callback(option)
                         toggleDropdown()
                     end)
-                    
+
                     return OptionButton
                 end
 
@@ -1063,11 +1053,11 @@ function IceHub.CreateMain()
                             child:Destroy()
                         end
                     end
-                    
+
                     for i, option in ipairs(currentOptions) do
                         createOptionButton(option, i)
                     end
-                    
+
                     totalOptions = #currentOptions
                     OptionsFrame.Size = UDim2.new(0, 295, 0, isOpen and (optionHeight * totalOptions) or 0)
                     UpdateSize()
@@ -1096,7 +1086,6 @@ function IceHub.CreateMain()
                 end
 
                 DropdownButton.MouseButton1Click:Connect(toggleDropdown)
-                TemplatePage:GetPropertyChangedSignal("CanvasPosition"):Connect(updateOptionsFramePosition)
                 rebuildOptions()
                 return {
                     AddOption = AddOption,
@@ -1121,13 +1110,13 @@ function IceHub.CreateMain()
                 TemplateButton.Position = UDim2.new(0.05, 0, 0.198794991, 0)
                 TemplateButton.Size = UDim2.new(0, 295, 0, 30)
                 TemplateButton.Text = ""
-                TemplateButton.TextColor3 = Color3.fromRGB(220, 220, 220)
+                TemplateButton.TextColor3 = Color3.fromRGB(255, 255, 255)
                 UICorner_11.CornerRadius = UDim.new(0, 4)
                 UICorner_11.Parent = TemplateButton
 
                 ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
                 ButtonBorder.Thickness = 0.5
-                ButtonBorder.Color = Color3.fromRGB(40, 40, 40)
+                ButtonBorder.Color = Color3.fromRGB(30, 30, 30)
                 ButtonBorder.Parent = TemplateButton
 
                 updateSectionFrame()
@@ -1139,7 +1128,7 @@ function IceHub.CreateMain()
                 TemplateText.Text = ""..ToggleName
                 TemplateText.Font = Enum.Font.Gotham
                 TemplateText.TextSize = 12.000
-                TemplateText.TextColor3 = Color3.fromRGB(220, 220, 220)
+                TemplateText.TextColor3 = Color3.fromRGB(255, 255, 255)
                 TemplateText.TextXAlignment = Enum.TextXAlignment.Left
                 TemplateText.BackgroundTransparency = 1
 
@@ -1170,24 +1159,19 @@ function IceHub.CreateMain()
                             TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                             {
                                 Rotation = 90,
-                                ImageTransparency = 0,
-                                ImageColor3 = Color3.fromRGB(255, 100, 100)
-                            }
-                        )
+                                ImageTransparency = 0
+                            })
                         tween:Play()
                         ButtonIcon.Image = imageOn
+                        ButtonIcon.ImageColor3 = Color3.fromRGB(255, 0, 0)
                     else
                         local tween = TweenService:Create(
-                            ButtonIcon,
-                            TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                            {
-                                Rotation = 0,
-                                ImageTransparency = 0.3,
-                                ImageColor3 = Color3.fromRGB(220, 220, 220)
-                            }
-                        )
+                            ButtonIcon,TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Rotation = 0,
+                                ImageTransparency = 0.3
+                            })
                         tween:Play()
                         ButtonIcon.Image = imageOff
+                        ButtonIcon.ImageColor3 = Color3.fromRGB(255, 255, 255)
                     end
 
                     callback(Toggle)
@@ -1201,17 +1185,17 @@ function IceHub.CreateMain()
                 TemplateLabel.Name = "CustomLabel"
                 TemplateLabel.Parent = TemplatePage
                 TemplateLabel.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-                TemplateLabel.BorderColor3 = Color3.fromRGB(40, 40, 40)
+                TemplateLabel.BorderColor3 = Color3.fromRGB(30, 30, 30)
                 TemplateLabel.Size = UDim2.new(0, 295, 0, 30)
                 TemplateLabel.Font = Enum.Font.Gotham
                 TemplateLabel.Text = ""..LabelText
-                TemplateLabel.TextColor3 = Color3.fromRGB(255, 50, 50)
+                TemplateLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
                 TemplateLabel.TextSize = 12.000
-                
+
                 local ButtonBorder = Instance.new("UIStroke")
                 ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
                 ButtonBorder.Thickness = 0.5
-                ButtonBorder.Color = Color3.fromRGB(40, 40, 40)
+                ButtonBorder.Color = Color3.fromRGB(30, 30, 30)
                 ButtonBorder.Parent = TemplateLabel
 
                 UICorner_10.CornerRadius = UDim.new(0, 4)
@@ -1236,16 +1220,16 @@ function IceHub.CreateMain()
                 TemplateBox.Position = UDim2.new(0, 0, 0.39759019, 0)
                 TemplateBox.Size = UDim2.new(0, 295, 0, 30)
                 TemplateBox.Font = Enum.Font.Gotham
-                TemplateBox.PlaceholderColor3 = Color3.fromRGB(150, 150, 150)
+                TemplateBox.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
                 TemplateBox.PlaceholderText = ""..PlaceholderText
                 TemplateBox.Text = ""
-                TemplateBox.TextColor3 = Color3.fromRGB(220, 220, 220)
+                TemplateBox.TextColor3 = Color3.fromRGB(255, 255, 255)
                 TemplateBox.TextSize = 12.000
-                
+
                 local ButtonBorder = Instance.new("UIStroke")
                 ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
                 ButtonBorder.Thickness = 0.5
-                ButtonBorder.Color = Color3.fromRGB(40, 40, 40)
+                ButtonBorder.Color = Color3.fromRGB(30, 30, 30)
                 ButtonBorder.Parent = TemplateBox
 
                 UICorner_12.CornerRadius = UDim.new(0, 4)
@@ -1253,14 +1237,14 @@ function IceHub.CreateMain()
 
                 updateSectionFrame()
                 UpdateSize()
-                
+
                 TemplateText.Parent = TemplateBox
                 TemplateText.Size = UDim2.new(1, -40, 1, 0)
                 TemplateText.Position = UDim2.new(0, 30, 0, 0)
                 TemplateText.Text = ""..Text
                 TemplateText.Font = Enum.Font.Gotham
                 TemplateText.TextSize = 12.000
-                TemplateText.TextColor3 = Color3.fromRGB(220, 220, 220)
+                TemplateText.TextColor3 = Color3.fromRGB(255, 255, 255)
                 TemplateText.TextXAlignment = Enum.TextXAlignment.Left
                 TemplateText.BackgroundTransparency = 1
 
@@ -1287,126 +1271,10 @@ function IceHub.CreateMain()
                 end)
             end
 
-            function Elements:NewTutorial(Images)
-                local TemplateTutorial = Instance.new("TextButton")
-                local UICorner_13 = Instance.new("UICorner")
-
-                TemplateTutorial.Name = "TemplateTutorial"
-                TemplateTutorial.Parent = TemplatePage
-                TemplateTutorial.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-                TemplateTutorial.BorderColor3 = Color3.fromRGB(10, 10, 10)
-                TemplateTutorial.Position = UDim2.new(0, 0, 0.59638536, 0)
-                TemplateTutorial.Size = UDim2.new(0, 295, 0, 30)
-                TemplateTutorial.Font = Enum.Font.Gotham
-                TemplateTutorial.Text = "Tutorial"
-                TemplateTutorial.TextColor3 = Color3.fromRGB(220, 220, 220)
-                TemplateTutorial.TextSize = 12.000
-
-                UICorner_13.CornerRadius = UDim.new(0, 4)
-                UICorner_13.Parent = TemplateTutorial
-
-                updateSectionFrame()
-                UpdateSize()
-
-                _G.TutorialTweening = false
-                TemplateTutorial.MouseButton1Click:Connect(function()
-                    local TutorialFrame = Instance.new("Frame")
-                    local UICorner_18 = Instance.new("UICorner")
-                    local Understand = Instance.new("TextButton")
-                    local UICorner_19 = Instance.new("UICorner")
-                    local TutorialImage = Instance.new("ImageLabel")
-                    local UICorner_20 = Instance.new("UICorner")
-                    local TutorialPage = Instance.new("ScrollingFrame")
-                    local ClickBlock = Instance.new("TextButton")
-
-                    TutorialPage.Name = "TutorialPage"
-                    TutorialPage.Parent = FrameContainer
-                    TutorialPage.Active = true
-                    TutorialPage.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-                    TutorialPage.BackgroundTransparency = 1.000
-                    TutorialPage.BorderColor3 = Color3.fromRGB(15, 15, 15)
-                    TutorialPage.Position = UDim2.new(0, 0, 0.136466324, 0)
-                    TutorialPage.Size = UDim2.new(0, 425, 0, 181)
-                    TutorialPage.Visible = false
-                    TutorialPage.ScrollBarThickness = 0
-
-                    ClickBlock.Name = "ClickBlock"
-                    ClickBlock.Parent = TutorialPage
-                    ClickBlock.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-                    ClickBlock.BackgroundTransparency = 1.000
-                    ClickBlock.Size = UDim2.new(0, 425, 0, 181)
-                    ClickBlock.Visible = false
-                    ClickBlock.AutoButtonColor = false
-                    ClickBlock.Font = Enum.Font.SourceSans
-                    ClickBlock.Text = ""
-                    ClickBlock.TextColor3 = Color3.fromRGB(0, 0, 0)
-                    ClickBlock.TextSize = 14.000
-
-                    TutorialFrame.Name = "TutorialFrame"
-                    TutorialFrame.Parent = TutorialPage
-                    TutorialFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-                    TutorialFrame.BorderColor3 = Color3.fromRGB(15, 15, 15)
-                    TutorialFrame.Position = UDim2.new(0, 0, -0.5, 0)
-                    TutorialFrame.Size = UDim2.new(0, 425, 0, 181)
-
-                    UICorner_18.CornerRadius = UDim.new(0, 4)
-                    UICorner_18.Parent = TutorialFrame
-
-                    Understand.Name = "Understand"
-                    Understand.Parent = TutorialFrame
-                    Understand.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-                    Understand.BorderColor3 = Color3.fromRGB(10, 10, 10)
-                    Understand.Position = UDim2.new(0.0199999996, 0, 0.828000009, 0)
-                    Understand.Size = UDim2.new(0, 410, 0, 25)
-                    Understand.AutoButtonColor = false
-                    Understand.Font = Enum.Font.SourceSans
-                    Understand.Text = "Okay, I understand."
-                    Understand.TextColor3 = Color3.fromRGB(220, 220, 220)
-                    Understand.TextSize = 15.000
-                    Understand.MouseButton1Click:Connect(function()
-                        if _G.TutorialTweening == false then
-                            _G.TutorialTweening = true
-                            TabContainer.Visible = true
-                            TutorialFrame:TweenPosition(UDim2.new(0, 0, -0.5, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Quad, 1, true)
-                            wait(1)
-                            ClickBlock.Visible = false
-                            _G.TutorialTweening = false
-                            TutorialPage:Destroy()
-                        end
-                    end)
-
-                    UICorner_19.CornerRadius = UDim.new(0, 4)
-                    UICorner_19.Parent = Understand
-
-                    TutorialImage.Name = "TutorialImage"
-                    TutorialImage.Parent = TutorialFrame
-                    TutorialImage.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-                    TutorialImage.BorderColor3 = Color3.fromRGB(15, 15, 15)
-                    TutorialImage.Position = UDim2.new(0.0178458244, 0, 0.0309286155, 0)
-                    TutorialImage.Size = UDim2.new(0, 410, 0, 140)
-                    TutorialImage.Image = "http://www.roblox.com/asset/?id="..Images
-
-                    UICorner_20.CornerRadius = UDim.new(0, 4)
-                    UICorner_20.Parent = TutorialImage
-                    
-                    if _G.TutorialTweening == false then
-                        _G.TutorialTweening = true
-                        TutorialPage.Visible = true
-                        ClickBlock.Visible = true
-                        TutorialFrame:TweenPosition(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Quad, 1, true)
-                        wait(1)
-                        TabContainer.Visible = false
-                        _G.TutorialTweening = false
-                    end
-                end)
-            end
-
             return Elements
         end
-
         return Sections
     end
-
     return Tabs
 end
 
