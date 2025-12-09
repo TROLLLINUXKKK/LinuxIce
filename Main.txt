@@ -10,13 +10,13 @@ local IceHub = {}
 
 local Options = {
 
-    BrookhavenTitle = "Shnmaxhub - Brookhaven",
+    BrookhavenTitle = "LinuxHub - Brookhaven",
 
     TitleColor = Color3.fromRGB(255, 255, 255),
 
-    LabelColor = Color3.fromRGB(0, 255, 255),
+    LabelColor = Color3.fromRGB(178, 34, 34), -- Vermelho forte escuro em vez de azul
 
-    Owners = {"Shelby"},
+    Owners = {"Shelby's"},
 
     Discord1 = "https://discord.gg/dVZjkKFPPg",
 
@@ -222,9 +222,9 @@ function IceHub.CreateMain()
 
 	MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 
-	MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	MainFrame.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
-	MainFrame.BorderColor3 = Color3.fromRGB(30, 30, 30)
+	MainFrame.BorderColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 	MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 
@@ -242,7 +242,7 @@ function IceHub.CreateMain()
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = MainFrame
 
@@ -258,9 +258,9 @@ function IceHub.CreateMain()
 
 	TabContainer.Parent = MainFrame
 
-	TabContainer.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	TabContainer.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-	TabContainer.BorderColor3 = Color3.fromRGB(47, 47, 47)
+	TabContainer.BorderColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 	TabContainer.Size = UDim2.new(0, 110, 0, 210)
 
@@ -276,11 +276,11 @@ function IceHub.CreateMain()
 
 	ScrollingFrame.Active = true
 
-	ScrollingFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	ScrollingFrame.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 	ScrollingFrame.BackgroundTransparency = 0
 
-	ScrollingFrame.BorderColor3 = Color3.fromRGB(20, 20, 20)
+	ScrollingFrame.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 	ScrollingFrame.Position = UDim2.new(0.0454545468, 0, 0.176190615, 0)
 
@@ -304,7 +304,7 @@ function IceHub.CreateMain()
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = ScrollingFrame
 
@@ -322,9 +322,9 @@ function IceHub.CreateMain()
 
 	Menu.Parent = ScrollingFrame
 
-	Menu.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	Menu.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-	Menu.BorderColor3 = Color3.fromRGB(20, 20, 20)
+	Menu.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 	Menu.Position = UDim2.new(0, 0, -1.77427779e-07, 0)
 
@@ -336,7 +336,7 @@ function IceHub.CreateMain()
 
 	Menu.Text = "Menu"
 
-	Menu.TextColor3 = Color3.fromRGB(0, 255, 255)
+	Menu.TextColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 	Menu.TextSize = 12.000
 
@@ -356,7 +356,7 @@ function IceHub.CreateMain()
 
     -- Depois definir apenas a aba Menu como vermelha
 
-    Menu.TextColor3 = Color3.fromRGB(0, 255, 255)
+    Menu.TextColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     
 
@@ -394,9 +394,9 @@ end)
 
 	MenuPage.Active = true
 
-	MenuPage.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	MenuPage.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
-	MenuPage.BorderColor3 = Color3.fromRGB(47, 47, 47)
+	MenuPage.BorderColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 	MenuPage.Position = UDim2.new(0.273000002, 0, 0.159999996, 0)
 
@@ -412,11 +412,11 @@ end)
 
     NameLabel.Parent = MenuPage
 
-    NameLabel.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    NameLabel.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
     NameLabel.BackgroundTransparency = 0
 
-    NameLabel.BorderColor3 = Color3.fromRGB(20, 20, 20)
+    NameLabel.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
     NameLabel.Position = UDim2.new(0.375201404, 0, 0.000481928233, 0)
 
@@ -426,7 +426,7 @@ end)
 
     NameLabel.Text = "Hey " .. player.Name
 
-    NameLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
+    NameLabel.TextColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     NameLabel.TextSize = 14.000
 
@@ -438,7 +438,7 @@ end)
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = NameLabel
 
@@ -460,9 +460,9 @@ end)
 
     ImageLabel.Parent = MenuPage
 
-    ImageLabel.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    ImageLabel.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-    ImageLabel.BorderColor3 = Color3.fromRGB(47, 47, 47)
+    ImageLabel.BorderColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ImageLabel.Position = UDim2.new(0.0249417536, 0, 0.000552987156, 0)
 
@@ -478,7 +478,7 @@ local ButtonBorder = Instance.new("UIStroke")
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = ImageLabel
 
@@ -498,9 +498,9 @@ local ButtonBorder = Instance.new("UIStroke")
 
     Discord.Parent = MenuPage
 
-    Discord.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    Discord.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-    Discord.BorderColor3 = Color3.fromRGB(20, 20, 20)
+    Discord.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
     Discord.Position = UDim2.new(0.374000013, 0, 0.00350000011, 0)
 
@@ -512,7 +512,7 @@ local ButtonBorder = Instance.new("UIStroke")
 
     Discord.Text = "Copy Discord Invite"
 
-    Discord.TextColor3 = Color3.fromRGB(0, 255, 255)
+    Discord.TextColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     Discord.TextSize = 14
 
@@ -524,7 +524,7 @@ local ButtonBorder = Instance.new("UIStroke")
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = Discord
 
@@ -556,9 +556,9 @@ end
 
 	IcyImage.Parent = MenuPage
 
-	IcyImage.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	IcyImage.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-	IcyImage.BorderColor3 = Color3.fromRGB(47, 47, 47)
+	IcyImage.BorderColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 	IcyImage.Position = UDim2.new(0.0249417536, 0, 0.0123815509, 0)
 
@@ -574,7 +574,7 @@ local ButtonBorder = Instance.new("UIStroke")
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = IcyImage
 
@@ -590,9 +590,9 @@ local ButtonBorder = Instance.new("UIStroke")
 
 	NillestImage.Parent = MenuPage
 
-	NillestImage.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	NillestImage.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-	NillestImage.BorderColor3 = Color3.fromRGB(47, 47, 47)
+	NillestImage.BorderColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 	NillestImage.Position = UDim2.new(0.0249417536, 0, 0.0219548456, 0)
 
@@ -608,7 +608,7 @@ local ButtonBorder = Instance.new("UIStroke")
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = NillestImage
 
@@ -636,9 +636,9 @@ KickAll.Name = "KickAll"
 
 KickAll.Parent = MenuPage
 
-KickAll.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+KickAll.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-KickAll.BorderColor3 = Color3.fromRGB(20,20,20)
+KickAll.BorderColor3 = Color3.fromRGB(5,5,5) -- Preto mais escuro
 
 KickAll.Position = UDim2.new(0.374412775,0,0.00655617705,0)
 
@@ -650,7 +650,7 @@ KickAll.Font = Enum.Font.SourceSans
 
 KickAll.Text = "Kick All"
 
-KickAll.TextColor3 = Color3.fromRGB(0,255,255)
+KickAll.TextColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 KickAll.TextSize = 14
 
@@ -662,7 +662,7 @@ ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
 ButtonBorder.Thickness = 0.5
 
-ButtonBorder.Color = Color3.fromRGB(47,47,47)
+ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 ButtonBorder.Parent = KickAll
 
@@ -810,7 +810,7 @@ end)
 
 	TextLabel.Parent = MenuPage
 
-	TextLabel.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	TextLabel.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 	TextLabel.BackgroundTransparency = 0
 
@@ -822,7 +822,7 @@ end)
 
 	TextLabel.Text = "Developers"
 
-	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 	TextLabel.TextSize = 14.000
 
@@ -834,7 +834,7 @@ end)
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = TextLabel
 
@@ -864,7 +864,7 @@ end)
 
 	IcyRoblox.Text = "Empty The Devs are trying to ban us"
 
-	IcyRoblox.TextColor3 = Color3.fromRGB(0, 255, 255)
+	IcyRoblox.TextColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 	IcyRoblox.TextSize = 14.000
 
@@ -888,7 +888,7 @@ end)
 
 	IcyYoutube.Text = "Channel: @shnmaxhub_devx"
 
-	IcyYoutube.TextColor3 = Color3.fromRGB(255, 255, 255)
+	IcyYoutube.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 	IcyYoutube.TextSize = 14.000
 
@@ -912,7 +912,7 @@ end)
 
 	IcyDiscord.Text = "Discord: @shnmaxscriptsowner"
 
-	IcyDiscord.TextColor3 = Color3.fromRGB(255, 255, 255)
+	IcyDiscord.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 	IcyDiscord.TextSize = 14.000
 
@@ -936,7 +936,7 @@ end)
 
 	NillestRoblox.Text = "Empty The Devs are trying to ban us"
 
-	NillestRoblox.TextColor3 = Color3.fromRGB(0, 255, 255)
+	NillestRoblox.TextColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 	NillestRoblox.TextSize = 14.000
 
@@ -960,7 +960,7 @@ end)
 
 	NillestDiscord.Text = "Discord: @fudidasosantsdasilva"
 
-	NillestDiscord.TextColor3 = Color3.fromRGB(255, 255, 255)
+	NillestDiscord.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 	NillestDiscord.TextSize = 14.000
 
@@ -994,9 +994,9 @@ end)
 
 	SliderButton.Parent = TemplateSlider
 
-	SliderButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	SliderButton.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
-	SliderButton.BorderColor3 = Color3.fromRGB(30, 30, 30)
+	SliderButton.BorderColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 	SliderButton.Position = UDim2.new(0.441684395, 0, 0.372043341, 0)
 
@@ -1024,10 +1024,8 @@ end)
 
 	Bar.Parent = SliderButton
 
-	Bar.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-
-	Bar.BorderColor3 = Color3.fromRGB(0, 255, 255)
-
+	Bar.BackgroundColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
+	Bar.BorderColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 	Bar.Position = UDim2.new(-0.00427652989, 0, -0.0999959335, 0)
 
 	Bar.Size = UDim2.new(0, 0, 0, 6)
@@ -1056,7 +1054,7 @@ end)
 
 	Value.Text = "0"
 
-	Value.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Value.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 	Value.TextSize = 14.000
 
@@ -1080,7 +1078,7 @@ end)
 
 	SliderTitle.Text = "Slider"
 
-	SliderTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+	SliderTitle.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 	SliderTitle.TextSize = 12.000
 
@@ -1094,9 +1092,9 @@ end)
 
 	SettingsPage.Active = true
 
-	SettingsPage.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	SettingsPage.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
-	SettingsPage.BorderColor3 = Color3.fromRGB(30, 30, 30)
+	SettingsPage.BorderColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 	SettingsPage.Position = UDim2.new(0.273000002, 0, 0.159999996, 0)
 
@@ -1120,9 +1118,9 @@ end)
 
 	TopFrame.Parent = MainFrame
 
-	TopFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	TopFrame.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-	TopFrame.BorderColor3 = Color3.fromRGB(47, 47, 47)
+	TopFrame.BorderColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 	TopFrame.Position = UDim2.new(0, 0, -0.00476175966, 0)
 
@@ -1136,7 +1134,7 @@ local ButtonBorder = Instance.new("UIStroke")
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = TopFrame
 
@@ -1152,9 +1150,9 @@ local ButtonBorder = Instance.new("UIStroke")
 
 	Close.Parent = TopFrame
 
-	Close.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	Close.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-	Close.BorderColor3 = Color3.fromRGB(20, 20, 20)
+	Close.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 	Close.Position = UDim2.new(0.929411769, 0, 0, 0)
 
@@ -1166,7 +1164,7 @@ local ButtonBorder = Instance.new("UIStroke")
 
 	Close.Text = "X"
 
-	Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Close.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 	Close.TextSize = 12.000
 
@@ -1216,7 +1214,7 @@ Close.MouseButton1Click:Connect(function()
 
                 TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 
-                {TextColor3 = Color3.fromRGB(255, 255, 255)}
+                {TextColor3 = Color3.fromRGB(240, 240, 240)} -- Branco claro
 
             )
 
@@ -1358,9 +1356,9 @@ Minimize.Name = "Minimize"
 
 Minimize.Parent = TopFrame
 
-Minimize.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Minimize.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-Minimize.BorderColor3 = Color3.fromRGB(20, 20, 20)
+Minimize.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 Minimize.Position = UDim2.new(0.858823538, 0, 0, 0)
 
@@ -1372,7 +1370,7 @@ Minimize.Font = Enum.Font.Gotham
 
 Minimize.Text = "-"
 
-Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 Minimize.TextSize = 12.000
 
@@ -1470,9 +1468,9 @@ end)
 
 	Title.Parent = TopFrame
 
-	Title.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	Title.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-	Title.BorderColor3 = Color3.fromRGB(47, 47, 47)
+	Title.BorderColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 	Title.Position = UDim2.new(0.0470588244, 0, 0.233333349, 0)
 
@@ -1482,7 +1480,7 @@ end)
 
 	Title.Text = ""..GameTitle
 
-	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Title.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 	Title.TextSize = 12.000
 
@@ -1500,11 +1498,11 @@ end)
 
 	ClosePage.Parent = MainFrame
 
-	ClosePage.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	ClosePage.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 	ClosePage.BackgroundTransparency = 1.000
 
-	ClosePage.BorderColor3 = Color3.fromRGB(20, 20, 20)
+	ClosePage.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 	ClosePage.Size = UDim2.new(0, 425, 0, 210)
 
@@ -1532,9 +1530,9 @@ end)
 
 	CloseFrame.Parent = ClosePage
 
-	CloseFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	CloseFrame.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
-	CloseFrame.BorderColor3 = Color3.fromRGB(30, 30, 30)
+	CloseFrame.BorderColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 	CloseFrame.Position = UDim2.new(0.485294133, 0, 0.467428595, 0)
 
@@ -1546,9 +1544,9 @@ end)
 
 	DontClose.Parent = CloseFrame
 
-	DontClose.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	DontClose.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-	DontClose.BorderColor3 = Color3.fromRGB(20, 20, 20)
+	DontClose.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 	DontClose.Position = UDim2.new(0.0993464887, 0, 0.550833881, 0)
 
@@ -1560,7 +1558,7 @@ end)
 
 	DontClose.Text = "Don't Close"
 
-	DontClose.TextColor3 = Color3.fromRGB(0, 255, 255)
+	DontClose.TextColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 	DontClose.TextSize = 20.000
 
@@ -1576,9 +1574,9 @@ end)
 
 	YesClose.Parent = CloseFrame
 
-	YesClose.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	YesClose.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-	YesClose.BorderColor3 = Color3.fromRGB(20, 20, 20)
+	YesClose.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 	YesClose.Position = UDim2.new(0.536449134, 0, 0.550833821, 0)
 
@@ -1590,7 +1588,7 @@ end)
 
 	YesClose.Text = "Yes, Close"
 
-	YesClose.TextColor3 = Color3.fromRGB(0, 255, 0)
+	YesClose.TextColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 	YesClose.TextSize = 20.000
 
@@ -1604,9 +1602,9 @@ end)
 
 	TextLabel_2.Parent = CloseFrame
 
-	TextLabel_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	TextLabel_2.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
-	TextLabel_2.BorderColor3 = Color3.fromRGB(30, 30, 30)
+	TextLabel_2.BorderColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 	TextLabel_2.Position = UDim2.new(0.219194219, 0, 0.136855215, 0)
 
@@ -1618,7 +1616,7 @@ end)
 
 	TextLabel_2.Text = "Warning ! Are you sure to close Shnmaxhub ?"
 
-	TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_2.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 	TextLabel_2.TextSize = 18.000
 
@@ -1642,9 +1640,9 @@ end)
 
 	Notify.AnchorPoint = Vector2.new(1, 1)
 
-	Notify.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	Notify.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
-	Notify.BorderColor3 = Color3.fromRGB(30, 30, 30)
+	Notify.BorderColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 	Notify.Position = UDim2.new(0.977205992, 0, 0.962383568, 0)
 
@@ -1674,7 +1672,7 @@ end)
 
 	NotifyText.Text = "Text Notify"
 
-	NotifyText.TextColor3 = Color3.fromRGB(255, 255, 255)
+	NotifyText.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 	NotifyText.TextSize = 20.000
 
@@ -1686,10 +1684,8 @@ end)
 
 	TimerBar.Parent = Notify
 
-	TimerBar.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-
-	TimerBar.BorderColor3 = Color3.fromRGB(0, 255, 255)
-
+	TimerBar.BackgroundColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
+	TimerBar.BorderColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 	TimerBar.Position = UDim2.new(0, 0, 0.972999692, 0)
 
 	TimerBar.Size = UDim2.new(0, 225, 0, 2)
@@ -1706,9 +1702,9 @@ end)
 
 	ImageNotify.AnchorPoint = Vector2.new(1, 1)
 
-	ImageNotify.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	ImageNotify.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
-	ImageNotify.BorderColor3 = Color3.fromRGB(30, 30, 30)
+	ImageNotify.BorderColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 	ImageNotify.Position = UDim2.new(0.977205992, 0, 0.962383568, 0)
 
@@ -1740,7 +1736,7 @@ end)
 
 	NotifyText_2.Text = "Image Notify"
 
-	NotifyText_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+	NotifyText_2.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 	NotifyText_2.TextSize = 18.000
 
@@ -1752,10 +1748,8 @@ end)
 
 	TimerBar_2.Parent = ImageNotify
 
-	TimerBar_2.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-
-	TimerBar_2.BorderColor3 = Color3.fromRGB(0, 255, 255)
-
+	TimerBar_2.BackgroundColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
+	TimerBar_2.BorderColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 	TimerBar_2.Position = UDim2.new(0, 0, 0.972999692, 0)
 
 	TimerBar_2.Size = UDim2.new(0, 225, 0, 2)
@@ -1900,9 +1894,9 @@ end
 
 		TemplateTab.Parent = ScrollingFrame
 
-		TemplateTab.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+		TemplateTab.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-		TemplateTab.BorderColor3 = Color3.fromRGB(20, 20, 20)
+		TemplateTab.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 		TemplateTab.Position = UDim2.new(0, 0, -1.77427779e-07, 0)
 
@@ -1914,7 +1908,7 @@ end
 
 		TemplateTab.Text = ""..TabName
 
-		TemplateTab.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TemplateTab.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 		TemplateTab.TextSize = 12.000
 
@@ -1934,9 +1928,9 @@ end
 
 		TemplatePage.Active = true
 
-		TemplatePage.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+		TemplatePage.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
-		TemplatePage.BorderColor3 = Color3.fromRGB(30, 30, 30)
+		TemplatePage.BorderColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 		TemplatePage.Position = UDim2.new(0.273000062, 0, 0.160000026, 0)
 
@@ -1990,13 +1984,13 @@ end
 
 				if v:IsA("TextButton") then
 
-					v.TextColor3 = Color3.fromRGB(255, 255, 255)
+					v.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 				end
 
 			end
 
-			TemplateTab.TextColor3 = Color3.fromRGB(0, 255, 255)
+			TemplateTab.TextColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 		end)
 
@@ -2090,9 +2084,9 @@ end
 
 				TemplateButton.Parent = TemplatePage
 
-				TemplateButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+				TemplateButton.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-				TemplateButton.BorderColor3 = Color3.fromRGB(20, 20, 20)
+				TemplateButton.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 				TemplateButton.Position = UDim2.new(0.05, 0, 0.198794991, 0)
 
@@ -2100,7 +2094,7 @@ end
 
 				TemplateButton.Text = ""
 
-				TemplateButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+				TemplateButton.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 				
 
@@ -2114,7 +2108,7 @@ end
 
                 ButtonBorder.Thickness = 0.5
 
-                ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+                ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
                 ButtonBorder.Parent = TemplateButton
 
@@ -2138,7 +2132,7 @@ end
 
                 TemplateText.TextSize = 12.000
 
-                TemplateText.TextColor3 = Color3.fromRGB(255, 255, 255)
+                TemplateText.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
                 TemplateText.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -2200,7 +2194,7 @@ function Elements:NewDropdown(DropdownName, Options, callback)
 
     DropdownButton.Parent = TemplatePage
 
-    DropdownButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    DropdownButton.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
     DropdownButton.BorderSizePixel = 0
 
@@ -2210,7 +2204,7 @@ function Elements:NewDropdown(DropdownName, Options, callback)
 
     DropdownButton.Text = ""
 
-    DropdownButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    DropdownButton.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
     DropdownButton.ZIndex = 2
 
@@ -2222,7 +2216,7 @@ function Elements:NewDropdown(DropdownName, Options, callback)
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = DropdownButton
 
@@ -2250,7 +2244,7 @@ function Elements:NewDropdown(DropdownName, Options, callback)
 
     DropdownText.TextSize = 12
 
-    DropdownText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    DropdownText.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
     DropdownText.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -2302,7 +2296,7 @@ function Elements:NewDropdown(DropdownName, Options, callback)
 
     OptionsFrame.Parent = TemplatePage
 
-    OptionsFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    OptionsFrame.BackgroundColor3 = Color3.fromRGB(8, 8, 8) -- Preto bem escuro
 
     OptionsFrame.BorderSizePixel = 0
 
@@ -2422,7 +2416,7 @@ function Elements:NewDropdown(DropdownName, Options, callback)
 
         OptionButton.Parent = OptionsFrame
 
-        OptionButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+        OptionButton.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
         OptionButton.BorderSizePixel = 0
 
@@ -2436,7 +2430,7 @@ function Elements:NewDropdown(DropdownName, Options, callback)
 
         OptionButton.TextSize = 12
 
-        OptionButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+        OptionButton.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
         OptionButton.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -2590,9 +2584,9 @@ end
 
     TemplateButton.Parent = TemplatePage
 
-    TemplateButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    TemplateButton.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-    TemplateButton.BorderColor3 = Color3.fromRGB(20, 20, 20)
+    TemplateButton.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
     TemplateButton.Position = UDim2.new(0.05, 0, 0.198794991, 0)
 
@@ -2600,17 +2594,19 @@ end
 
     TemplateButton.Text = ""
 
-    TemplateButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TemplateButton.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
     UICorner_11.CornerRadius = UDim.new(0, 4)
 
-    UICorner_11.Parent = Te
+    UICorner_11.Parent = TemplateButton
+
+
 
     ButtonBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = TemplateButton
 
@@ -2634,7 +2630,7 @@ end
 
     TemplateText.TextSize = 12.000
 
-    TemplateText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TemplateText.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
     TemplateText.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -2742,9 +2738,9 @@ end
 
 					TemplateLabel.Parent = TemplatePage
 
-					TemplateLabel.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+					TemplateLabel.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-					TemplateLabel.BorderColor3 = Color3.fromRGB(47, 47, 47)
+					TemplateLabel.BorderColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 					TemplateLabel.Size = UDim2.new(0, 295, 0, 30)
 
@@ -2752,7 +2748,7 @@ end
 
 					TemplateLabel.Text = ""..LabelText
 
-					TemplateLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
+					TemplateLabel.TextColor3 = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
 					TemplateLabel.TextSize = 12.000
 
@@ -2764,7 +2760,7 @@ end
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = TemplateLabel
 
@@ -2804,9 +2800,9 @@ end
 
 						TemplateBox.Parent = TemplatePage
 
-						TemplateBox.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+						TemplateBox.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-						TemplateBox.BorderColor3 = Color3.fromRGB(20, 20, 20)
+						TemplateBox.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 						TemplateBox.Position = UDim2.new(0, 0, 0.39759019, 0)
 
@@ -2820,7 +2816,7 @@ end
 
 						TemplateBox.Text = ""
 
-						TemplateBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+						TemplateBox.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 						TemplateBox.TextSize = 12.000
 
@@ -2832,7 +2828,7 @@ end
 
     ButtonBorder.Thickness = 0.5
 
-    ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+    ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
     ButtonBorder.Parent = TemplateBox
 
@@ -2850,7 +2846,7 @@ end
 
                         ButtonBorder.Thickness = 0
 
-                        ButtonBorder.Color = Color3.fromRGB(47, 47, 47)
+                        ButtonBorder.Color = Color3.fromRGB(178, 34, 34) -- Vermelho forte escuro
 
                         ButtonBorder.Parent = TemplateBox
 
@@ -2872,7 +2868,7 @@ end
 
                         TemplateText.TextSize = 12.000
 
-                        TemplateText.TextColor3 = Color3.fromRGB(255, 255, 255)
+                        TemplateText.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
                         TemplateText.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -2936,9 +2932,9 @@ end
 
 							TemplateTutorial.Parent = TemplatePage
 
-							TemplateTutorial.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+							TemplateTutorial.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-							TemplateTutorial.BorderColor3 = Color3.fromRGB(20, 20, 20)
+							TemplateTutorial.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 							TemplateTutorial.Position = UDim2.new(0, 0, 0.59638536, 0)
 
@@ -2948,7 +2944,7 @@ end
 
 							TemplateTutorial.Text = "Tutorial"
 
-							TemplateTutorial.TextColor3 = Color3.fromRGB(255, 255, 255)
+							TemplateTutorial.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 							TemplateTutorial.TextSize = 12.000
 
@@ -2992,9 +2988,9 @@ end
 
 								TemplateTutorial.Parent = TemplatePage
 
-								TemplateTutorial.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+								TemplateTutorial.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-								TemplateTutorial.BorderColor3 = Color3.fromRGB(20, 20, 20)
+								TemplateTutorial.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 								TemplateTutorial.Position = UDim2.new(0, 0, 0.59638536, 0)
 
@@ -3004,7 +3000,7 @@ end
 
 								TemplateTutorial.Text = "Tutorial"
 
-								TemplateTutorial.TextColor3 = Color3.fromRGB(255, 255, 255)
+								TemplateTutorial.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 								TemplateTutorial.TextSize = 12.000
 
@@ -3022,11 +3018,11 @@ end
 
 								TutorialPage.Active = true
 
-								TutorialPage.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+								TutorialPage.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 								TutorialPage.BackgroundTransparency = 1.000
 
-								TutorialPage.BorderColor3 = Color3.fromRGB(30, 30, 30)
+								TutorialPage.BorderColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 								TutorialPage.Position = UDim2.new(0, 0, 0.136466324, 0)
 
@@ -3066,9 +3062,9 @@ end
 
 								TutorialFrame.Parent = TutorialPage
 
-								TutorialFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+								TutorialFrame.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
-								TutorialFrame.BorderColor3 = Color3.fromRGB(30, 30, 30)
+								TutorialFrame.BorderColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 								TutorialFrame.Position = UDim2.new(0, 0, -0.5, 0)
 
@@ -3086,9 +3082,9 @@ end
 
 								Understand.Parent = TutorialFrame
 
-								Understand.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+								Understand.BackgroundColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
-								Understand.BorderColor3 = Color3.fromRGB(20, 20, 20)
+								Understand.BorderColor3 = Color3.fromRGB(5, 5, 5) -- Preto mais escuro
 
 								Understand.Position = UDim2.new(0.0199999996, 0, 0.828000009, 0)
 
@@ -3100,7 +3096,7 @@ end
 
 								Understand.Text = "Okay, I understand."
 
-								Understand.TextColor3 = Color3.fromRGB(255, 255, 255)
+								Understand.TextColor3 = Color3.fromRGB(240, 240, 240) -- Branco claro
 
 								Understand.TextSize = 15.000
 
@@ -3138,9 +3134,9 @@ end
 
 								TutorialImage.Parent = TutorialFrame
 
-								TutorialImage.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+								TutorialImage.BackgroundColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
-								TutorialImage.BorderColor3 = Color3.fromRGB(30, 30, 30)
+								TutorialImage.BorderColor3 = Color3.fromRGB(10, 10, 10) -- Preto bem escuro
 
 								TutorialImage.Position = UDim2.new(0.0178458244, 0, 0.0309286155, 0)
 
