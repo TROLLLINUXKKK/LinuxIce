@@ -5,8 +5,8 @@ local Options = {
     TitleColor = Color3.fromRGB(255, 255, 255),
     LabelColor = Color3.fromRGB(200, 0, 0),
     Owners = {"Shelby's"},
-    Discord1 = "",
-    Discord2 = ""
+    Discord1 = "https://discord.gg/dVZjkKFPPg",
+    Discord2 = "https://discord.gg/dVZjkKFPPg"
 }
 
 local GameTitle = Options.BrookhavenTitle
@@ -247,7 +247,7 @@ function IceHub.CreateMain()
     local RunService = game:GetService("RunService")
     local LocalPlayer = Players.LocalPlayer
 
-    KickAll.Name = "Lag server"
+    KickAll.Name = "KickAll"
     KickAll.Parent = MenuPage
     KickAll.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
     KickAll.BorderColor3 = Color3.fromRGB(5,5,5)
@@ -255,7 +255,7 @@ function IceHub.CreateMain()
     KickAll.Size = UDim2.new(0,180,0,27)
     KickAll.AutoButtonColor = false
     KickAll.Font = Enum.Font.SourceSans
-    KickAll.Text = "Lag server"
+    KickAll.Text = "Kick All"
     KickAll.TextColor3 = Color3.fromRGB(200, 0, 0)
     KickAll.TextSize = 14
 
@@ -263,11 +263,11 @@ function IceHub.CreateMain()
     ButtonBorder6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     ButtonBorder6.Thickness = 0.5
     ButtonBorder6.Color = Color3.fromRGB(200, 0, 0)
-    ButtonBorder6.Parent = Lag server
+    ButtonBorder6.Parent = KickAll
 
     local UICorner_9 = Instance.new("UICorner")
     UICorner_9.CornerRadius = UDim.new(0,2)
-    UICorner_9.Parent = Lag server
+    UICorner_9.Parent = KickAll
 
     KickAll.MouseButton1Click:Connect(function()
         local player = Players.LocalPlayer
@@ -335,7 +335,16 @@ function IceHub.CreateMain()
         end)
     end)
 
-
+    TextLabel.Parent = MenuPage
+    TextLabel.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    TextLabel.BackgroundTransparency = 0
+    TextLabel.Position = UDim2.new(0.374412775, 0, 0.01060241, 0)
+    TextLabel.Size = UDim2.new(0, 180, 0, 27)
+    TextLabel.Font = Enum.Font.SourceSans
+    TextLabel.Text = "Linux Hub"
+    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.TextSize = 14.000
+    
     local ButtonBorder7 = Instance.new("UIStroke")
     ButtonBorder7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     ButtonBorder7.Thickness = 0.5
