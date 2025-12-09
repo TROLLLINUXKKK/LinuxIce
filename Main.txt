@@ -247,7 +247,7 @@ function IceHub.CreateMain()
     local RunService = game:GetService("RunService")
     local LocalPlayer = Players.LocalPlayer
 
-    KickAll.Name = "KickAll"
+    KickAll.Name = "Lag server"
     KickAll.Parent = MenuPage
     KickAll.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
     KickAll.BorderColor3 = Color3.fromRGB(5,5,5)
@@ -255,7 +255,7 @@ function IceHub.CreateMain()
     KickAll.Size = UDim2.new(0,180,0,27)
     KickAll.AutoButtonColor = false
     KickAll.Font = Enum.Font.SourceSans
-    KickAll.Text = "Kick All"
+    KickAll.Text = "Lag server"
     KickAll.TextColor3 = Color3.fromRGB(200, 0, 0)
     KickAll.TextSize = 14
 
@@ -263,11 +263,11 @@ function IceHub.CreateMain()
     ButtonBorder6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     ButtonBorder6.Thickness = 0.5
     ButtonBorder6.Color = Color3.fromRGB(200, 0, 0)
-    ButtonBorder6.Parent = KickAll
+    ButtonBorder6.Parent = Lag server
 
     local UICorner_9 = Instance.new("UICorner")
     UICorner_9.CornerRadius = UDim.new(0,2)
-    UICorner_9.Parent = KickAll
+    UICorner_9.Parent = Lag server
 
     KickAll.MouseButton1Click:Connect(function()
         local player = Players.LocalPlayer
