@@ -4,17 +4,13 @@ local Options = {
     BrookhavenTitle = "Linux Hub - Brookhaven",
     TitleColor = Color3.fromRGB(255, 255, 255),
     LabelColor = Color3.fromRGB(200, 0, 0),
-    Owners = {"Shelby's"},
-    Discord1 = "https://discord.gg/dVZjkKFPPg",
-    Discord2 = "https://discord.gg/dVZjkKFPPg"
+    Owners = {"Shelby's"}
 }
 
 local GameTitle = Options.BrookhavenTitle
 local titlecolor = Options.TitleColor
 local labelcolor = Options.LabelColor
 local owners = Options.Owners
-local discord1 = Options.Discord1
-local discord2 = Options.Discord2
 local player = game.Players.LocalPlayer
 
 function IceHub.CreateMain()
@@ -39,11 +35,8 @@ function IceHub.CreateMain()
     local UICorner_4 = Instance.new("UICorner")
     local ImageLabel = Instance.new("ImageLabel")
     local UICorner_5 = Instance.new("UICorner")
-    local Discord = Instance.new("TextButton")
-    local UICorner_6 = Instance.new("UICorner")
-    local KickAll = Instance.new("TextButton")
+    local LagAll = Instance.new("TextButton")
     local UICorner_9 = Instance.new("UICorner")
-    local TextLabel = Instance.new("TextLabel")
     local SettingsPage = Instance.new("ScrollingFrame")
     local UIListLayout_4 = Instance.new("UIListLayout")
     local TopFrame = Instance.new("Frame")
@@ -213,63 +206,29 @@ function IceHub.CreateMain()
     UICorner_5.CornerRadius = UDim.new(0, 4)
     UICorner_5.Parent = ImageLabel
 
-    local Discord = Instance.new("TextButton")
-    Discord.Name = "Discord"
-    Discord.Parent = MenuPage
-    Discord.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-    Discord.BorderColor3 = Color3.fromRGB(5, 5, 5)
-    Discord.Position = UDim2.new(0.374000013, 0, 0.00350000011, 0)
-    Discord.Size = UDim2.new(0, 180, 0, 27)
-    Discord.AutoButtonColor = false
-    Discord.Font = Enum.Font.SourceSans
-    Discord.Text = "Copy Discord Invite"
-    Discord.TextColor3 = Color3.fromRGB(200, 0, 0)
-    Discord.TextSize = 14
-    
-    local ButtonBorder5 = Instance.new("UIStroke")
-    ButtonBorder5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    ButtonBorder5.Thickness = 0.5
-    ButtonBorder5.Color = Color3.fromRGB(200, 0, 0)
-    ButtonBorder5.Parent = Discord
-
-    local UICorner_6 = Instance.new("UICorner")
-    UICorner_6.CornerRadius = UDim.new(0, 4)
-    UICorner_6.Parent = Discord
-
-    pcall(function()
-        Discord.MouseButton1Click:Connect(function()
-            setclipboard("https://discord.gg/dVZjkKFPPg")
-        end)
-    end)
-
-    local TweenService = game:GetService("TweenService")
-    local Players = game:GetService("Players")
-    local RunService = game:GetService("RunService")
-    local LocalPlayer = Players.LocalPlayer
-
-    KickAll.Name = "KickAll"
-    KickAll.Parent = MenuPage
-    KickAll.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-    KickAll.BorderColor3 = Color3.fromRGB(5,5,5)
-    KickAll.Position = UDim2.new(0.374412775,0,0.00655617705,0)
-    KickAll.Size = UDim2.new(0,180,0,27)
-    KickAll.AutoButtonColor = false
-    KickAll.Font = Enum.Font.SourceSans
-    KickAll.Text = "Kick All"
-    KickAll.TextColor3 = Color3.fromRGB(200, 0, 0)
-    KickAll.TextSize = 14
+    LagAll.Name = "LagAll"
+    LagAll.Parent = MenuPage
+    LagAll.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    LagAll.BorderColor3 = Color3.fromRGB(5,5,5)
+    LagAll.Position = UDim2.new(0.374412775,0,0.00655617705,0)
+    LagAll.Size = UDim2.new(0,180,0,27)
+    LagAll.AutoButtonColor = false
+    LagAll.Font = Enum.Font.SourceSans
+    LagAll.Text = "Lag All"
+    LagAll.TextColor3 = Color3.fromRGB(200, 0, 0)
+    LagAll.TextSize = 14
 
     local ButtonBorder6 = Instance.new("UIStroke")
     ButtonBorder6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     ButtonBorder6.Thickness = 0.5
     ButtonBorder6.Color = Color3.fromRGB(200, 0, 0)
-    ButtonBorder6.Parent = KickAll
+    ButtonBorder6.Parent = LagAll
 
     local UICorner_9 = Instance.new("UICorner")
     UICorner_9.CornerRadius = UDim.new(0,2)
-    UICorner_9.Parent = KickAll
+    UICorner_9.Parent = LagAll
 
-    KickAll.MouseButton1Click:Connect(function()
+    LagAll.MouseButton1Click:Connect(function()
         local player = Players.LocalPlayer
 
         local success, character = pcall(function()
@@ -334,26 +293,6 @@ function IceHub.CreateMain()
             end
         end)
     end)
-
-    TextLabel.Parent = MenuPage
-    TextLabel.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-    TextLabel.BackgroundTransparency = 0
-    TextLabel.Position = UDim2.new(0.374412775, 0, 0.01060241, 0)
-    TextLabel.Size = UDim2.new(0, 180, 0, 27)
-    TextLabel.Font = Enum.Font.SourceSans
-    TextLabel.Text = "Linux Hub"
-    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-    TextLabel.TextSize = 14.000
-    
-    local ButtonBorder7 = Instance.new("UIStroke")
-    ButtonBorder7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    ButtonBorder7.Thickness = 0.5
-    ButtonBorder7.Color = Color3.fromRGB(200, 0, 0)
-    ButtonBorder7.Parent = TextLabel
-
-    local UICorner_10 = Instance.new("UICorner")
-    UICorner_10.CornerRadius = UDim.new(0, 4)
-    UICorner_10.Parent = TextLabel   
 
     SettingsPage.Name = "SettingsPage"
     SettingsPage.Parent = FrameContainer
@@ -1122,6 +1061,7 @@ function IceHub.CreateMain()
                 ButtonIcon.Position = UDim2.new(0, 0, 0.1, 0)
                 ButtonIcon.Size = UDim2.new(0, 25, 0, 25)
                 ButtonIcon.Image = "rbxassetid://105851806789619"
+                ButtonIcon.ImageColor3 = Color3.fromRGB(200, 0, 0)
 
                 ButtonIcon2.Name = "Icon"
                 ButtonIcon2.Parent = TemplateButton
@@ -1129,6 +1069,7 @@ function IceHub.CreateMain()
                 ButtonIcon2.Position = UDim2.new(0.93, 0, 0.15, 0)
                 ButtonIcon2.Size = UDim2.new(0, 20, 0, 20)
                 ButtonIcon2.Image = "rbxassetid://109266253466247"
+                ButtonIcon2.ImageColor3 = Color3.fromRGB(200, 0, 0)
 
                 local Toggle = false
                 TemplateButton.MouseButton1Click:Connect(function()
@@ -1143,13 +1084,15 @@ function IceHub.CreateMain()
                         TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                         {
                         Rotation = 90,
-                        ImageTransparency = 0
+                        ImageTransparency = 0,
+                        ImageColor3 = Color3.fromRGB(200, 0, 0)
                         })tween:Play()
                         ButtonIcon.Image = imageOn
                     else
                         local tween = TweenService:Create(
                         ButtonIcon,TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Rotation = 0,
-                        ImageTransparency = 0.3
+                        ImageTransparency = 0.3,
+                        ImageColor3 = Color3.fromRGB(200, 0, 0)
                         })tween:Play()
                         ButtonIcon.Image = imageOff
                     end
@@ -1232,7 +1175,7 @@ function IceHub.CreateMain()
                 ButtonIcon.Parent = TemplateBox
                 ButtonIcon.BackgroundTransparency = 1
                 ButtonIcon.Position = UDim2.new(0.02, 0, 0.15, 0)
-                ButtonIcon.ImageColor3 = Color3.new(50/255, 50/255, 50/255)
+                ButtonIcon.ImageColor3 = Color3.fromRGB(200, 0, 0)
                 ButtonIcon.Size = UDim2.new(0, 20, 0, 20)
                 ButtonIcon.Image = "rbxassetid://97889814027474"
                 ButtonIcon.Rotation = 270
@@ -1243,6 +1186,7 @@ function IceHub.CreateMain()
                 ButtonIcon2.Position = UDim2.new(0.93, 0, 0.15, 0)
                 ButtonIcon2.Size = UDim2.new(0, 20, 0, 20)
                 ButtonIcon2.Image = "rbxassetid://109266253466247"
+                ButtonIcon2.ImageColor3 = Color3.fromRGB(200, 0, 0)
                 
                 TemplateBox.FocusLost:Connect(function()
                     callback(TemplateBox.Text)
