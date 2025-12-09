@@ -5,8 +5,8 @@ local Options = {
     TitleColor = Color3.fromRGB(255, 255, 255),
     LabelColor = Color3.fromRGB(200, 0, 0),
     Owners = {"Shelby's"},
-    Discord1 = "https://discord.gg/dVZjkKFPPg",
-    Discord2 = "https://discord.gg/dVZjkKFPPg"
+    Discord1 = "",
+    Discord2 = ""
 }
 
 local GameTitle = Options.BrookhavenTitle
